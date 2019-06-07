@@ -1,0 +1,15 @@
+package com.reusemethods;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+
+
+public class Dropdown {
+	public void dropdownmethod(WebElement element,int index) {
+	Select sel=new Select(element);
+	sel.selectByIndex(index);
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25013" started-at="2019-06-07T10:45:19Z" finished-at="2019-06-07T10:45:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25013" started-at="2019-06-07T10:45:19Z" finished-at="2019-06-07T10:45:44Z">
+      <class name="com.testexecution.Textrunner">
+        <test-method status="PASS" signature="baseexecution()[pri:0, instance:com.testexecution.Textrunner@1ea9f6af]" name="baseexecution" duration-ms="24977" started-at="2019-06-07T10:45:19Z" finished-at="2019-06-07T10:45:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseexecution -->
+      </class> <!-- com.testexecution.Textrunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
