@@ -1,11 +1,13 @@
 package com.webpages;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.reusemethods.Commonmethods;
 import com.reusemethods.Dropdown;
 import com.reusemethods.Exelload;
 import com.reusemethods.Mousehover;
@@ -16,6 +18,7 @@ public class Webcls {
 	public static WebDriver driver;
 	Exelload eload=new Exelload();
 	Mousehover mover=new Mousehover();
+	Commonmethods cm=new Commonmethods();
 	Dropdown drop=new Dropdown();
 	@FindBy(xpath="//input[@id='txtUsername']")WebElement user;
 	@FindBy(xpath="//input[@id='txtPassword']")WebElement pass;
@@ -40,7 +43,7 @@ public class Webcls {
 			//mover.mouse_hover(select_women, driver);
 			//Actions act=new Actions(driver);
 			//act.moveToElement(select_women).build().perform();
-
+    
 			select_women.click();
 			select_tshirts.click();
 			
@@ -50,18 +53,26 @@ public class Webcls {
 		@FindBy(id="menu_leave_applyLeave")WebElement applytab;
 		@FindBy(xpath="//select[@id='applyleave_txtLeaveType']")WebElement leavetype;
 		@FindBy(xpath="//a[text()='view details']")WebElement viewdetails;
-		//@FindBy(xpath="")WebElement leavetype;
+		@FindBy(xpath="//select[@id='applyleave_txtLeaveType']//option [2]")WebElement selectleavetype;
 
 		public void applyleave() {
 			leavetab.click();
 			applytab.click();
 			leavetype.click();
 			//selectleavetype.click();
-			drop.dropdownmethod(leavetype,2);
+			Commonmethods.clickElementByJs(selectleavetype, driver);
+			//drop.dropdownmethod(leavetype,2);
 			// viewdetails.click();
 			//// Alert alt=driver.switchTo().alert();
 			// alt.getText();
 			// alt.accept();
+			/*Commonmethods.mouse_hover(leavetype, driver);
+			applytab.click();
+			leavetype.click();
+			drop.dropdownmethod(leavetype,2);*/
 			
 }
+		
+	
+		
 }

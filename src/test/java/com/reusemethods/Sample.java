@@ -6,5 +6,8 @@ public class Sample {
 		
 		System.out.println("Just Pull Testing");
 	}
+	public static void click() {
+		System.out.println("nkknkk");
+	}
 
 }

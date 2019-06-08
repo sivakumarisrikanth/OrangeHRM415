@@ -3,15 +3,18 @@ package com.reusemethods;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class Commonmethods {
 	public static WebDriver driver;
-	Exelload eload=new Exelload();
-	public WebDriver getbrowser(String Browser) {
+	static Exelload eload=new Exelload();
+	public static WebDriver getbrowser(String Browser) {
 		if(Browser.equals("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "E:\\ssy\\TrainingProject\\BrowserDrivers\\chromedriver.exe");
 			driver=new ChromeDriver();
@@ -42,6 +45,16 @@ public class Commonmethods {
 	}
 		return driver;
 		
+	}
+	public static void mouse_hover(WebElement element,WebDriver driver) {
+		Actions act=new Actions(driver);
+		act.moveToElement(element).build().perform();
+
+}
+	public static WebDriver clickElementByJs(WebElement element,WebDriver driver) {
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", element);
+		return driver;
 	}
 	
 	
