@@ -3,6 +3,7 @@ package com.reusemethods;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,17 +47,24 @@ public class Commonmethods {
 		return driver;
 		
 	}
-	public static void mouse_hover(WebElement element,WebDriver driver) {
+	public static void mouse_hover(WebElement element ) {
 		Actions act=new Actions(driver);
 		act.moveToElement(element).build().perform();
 
 }
-	public static WebDriver clickElementByJs(WebElement element,WebDriver driver) {
+	public static void clickElementByJs(WebElement element) {
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
-		return driver;
+		
 	}
+	public static void acceptAlert() {
+		Alert alt=driver.switchTo().alert();
+		alt.accept();
+	}
+	public static void dismissAlert() {
+		Alert alt=driver.switchTo().alert();
+		alt.dismiss();
 	
-	
+	}
 
 }

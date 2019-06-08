@@ -53,24 +53,24 @@ public class Webcls {
 		@FindBy(id="menu_leave_applyLeave")WebElement applytab;
 		@FindBy(xpath="//select[@id='applyleave_txtLeaveType']")WebElement leavetype;
 		@FindBy(xpath="//a[text()='view details']")WebElement viewdetails;
-		@FindBy(xpath="//select[@id='applyleave_txtLeaveType']//option [2]")WebElement selectleavetype;
+		@FindBy(xpath="//select[@id='applyleave_txtLeaveType']")WebElement selectleavetype;
 
 		public void applyleave() {
-			leavetab.click();
+			/*leavetab.click();
 			applytab.click();
-			leavetype.click();
+			leavetype.click();*/
 			//selectleavetype.click();
-			Commonmethods.clickElementByJs(selectleavetype, driver);
+			//Commonmethods.clickElementByJs(selectleavetype);
 			//drop.dropdownmethod(leavetype,2);
 			// viewdetails.click();
 			//// Alert alt=driver.switchTo().alert();
 			// alt.getText();
 			// alt.accept();
-			/*Commonmethods.mouse_hover(leavetype, driver);
+			Commonmethods.mouse_hover(leavetab);
 			applytab.click();
 			leavetype.click();
-			drop.dropdownmethod(leavetype,2);*/
-			
+			drop.dropdownmethod(leavetype,2);
+			Commonmethods.clickElementByJs(selectleavetype);
 }
 		
 	
