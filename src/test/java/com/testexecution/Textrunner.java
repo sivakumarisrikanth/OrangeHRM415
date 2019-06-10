@@ -21,5 +21,10 @@ Webcls cls= PageFactory.initElements(driver,Webcls.class );
  cls.pagelogin();
  //cls.ecommerce();
  cls.applyleave();
+// cls.leavebalance();
+ cls.datefeild();
+ cls.todatefeild();
+ cls.myleave_details();
+ cls.entitlements_details();
 }
 }

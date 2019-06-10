@@ -11,5 +11,10 @@ public class Dropdown {
 	sel.selectByIndex(index);
 		
 	}
-
+	
+		public void dropdownmethodbytext(WebElement element,String text) {
+		Select sel=new Select(element);
+		sel.selectByVisibleText(text);
+			
+		}
 }
